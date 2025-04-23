@@ -6,6 +6,9 @@ BLACK_FG=$(tput setaf 0)
 RESET=$(tput sgr0)
 
 apt_install_sd() {
+  sudo apt -o Dpkg::Options::="--force-confold" install software-properties-common -y 
+  add-apt-repository ppa:deadsnakes/ppa -y
+  apt update
   sudo apt -o Dpkg::Options::="--force-confold" install python3.10 -y
   sudo apt -o Dpkg::Options::="--force-confold" install python3-pip -y
   sudo apt -o Dpkg::Options::="--force-confold" install python3-venv -y

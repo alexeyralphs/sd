@@ -6,7 +6,7 @@ BLACK_FG=$(tput setaf 0)
 RESET=$(tput sgr0)
 
 apt_install_sd() {
-  sudo -u sdadmin /var/www/$admin_name/webui.sh
+  git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /var/www/$admin_name/stable-diffusion-webui
 
   echo '# For CPU render:' >  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
   echo 'export COMMANDLINE_ARGS="--autolaunch --update-check --no-half-vae --medvram-sdxl --opt-sdp-attention --skip-torch-cuda-test --use-cpu all --no-half --enable-insecure-extension-access"' >>  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh

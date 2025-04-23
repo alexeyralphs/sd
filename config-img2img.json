@@ -1,0 +1,26 @@
+{
+  "Img2Img Static": {
+    "img2img_sampling": "DPM++ 2M",
+    "img2img_scheduler": "Karras",
+    "img2img_steps": 40,
+    "img2img_batch_count": 1,
+    "img2img_batch_size": 1,
+    "img2img_cfg_scale": 7.5,
+    "img2img_denoising_strength": 0.5,
+    "img2img_enable-checkbox": true,
+    "img2img_switch_at": 0.5
+  },
+  "Face swap": {
+    "img2img_sampling": "DPM++ 2M",
+    "img2img_scheduler": "Karras",
+    "img2img_steps": 40,
+    "img2img_width": 810,
+    "img2img_height": 1080,
+    "img2img_batch_count": 1,
+    "img2img_batch_size": 1,
+    "img2img_cfg_scale": 7.5,
+    "img2img_denoising_strength": 0.125,
+    "img2img_enable-checkbox": true,
+    "img2img_switch_at": 0.5
+  }
+}

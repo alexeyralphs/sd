@@ -20,4 +20,7 @@ apt_install_sd() {
   echo '# export COMMANDLINE_ARGS="--autolaunch --update-check --no-half-vae --xformers --medvram-sdxl --opt-sdp-attention --skip-torch-cuda-test --no-half --enable-insecure-extension-access"' >>  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
 
   wget https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/blob/main/v1-5-pruned-emaonly.safetensors -O /var/www/$admin_name/stable-diffusion-webui/models/Stable-diffusion/v1-5-pruned-emaonly.safetensors
+
+  curl -s -o /usr/lib/systemd/system/sdwebui.service https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/sdwebui.service
+  sudo sed -i "s/\$admin_name/$admin_name/g" /usr/lib/systemd/system/sdwebui.service
 }

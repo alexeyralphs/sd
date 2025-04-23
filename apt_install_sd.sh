@@ -6,6 +6,15 @@ BLACK_FG=$(tput setaf 0)
 RESET=$(tput sgr0)
 
 apt_install_sd() {
+  sudo apt -o Dpkg::Options::="--force-confold" install python3 -y
+  sudo apt -o Dpkg::Options::="--force-confold" install python3-pip -y
+  sudo apt -o Dpkg::Options::="--force-confold" install python3-venv -y
+  sudo apt -o Dpkg::Options::="--force-confold" install libgl1 -y
+  sudo apt -o Dpkg::Options::="--force-confold" install libglib2.0-0 -y
+  sudo apt -o Dpkg::Options::="--force-confold" install bc -y
+  sudo apt -o Dpkg::Options::="--force-confold" install google-perftools -y
+  sudo apt -o Dpkg::Options::="--force-confold" install git -y
+
   git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /var/www/$admin_name/stable-diffusion-webui
 
   echo '# For CPU render:' >  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh

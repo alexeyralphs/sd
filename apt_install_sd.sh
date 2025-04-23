@@ -6,13 +6,6 @@ BLACK_FG=$(tput setaf 0)
 RESET=$(tput sgr0)
 
 apt_install_sd() {
-  sudo apt-get install -y python3.10 python3-pip python3-venv libgl1 libglib2.0-0 google-perftools git
-
-  sudo wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh -O /var/www/$admin_name/webui.sh
-  sudo mkdir -vp /var/www/$admin_name/stable-diffusion-webui
-
-  sudo chmod +x /var/www/$admin_name/webui.sh
-
   sudo -u sdadmin /var/www/$admin_name/webui.sh
 
   echo '# For CPU render:' >  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh

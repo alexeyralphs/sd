@@ -7,6 +7,8 @@ RESET=$(tput sgr0)
 
 apt_install_sd() {
   sudo apt -o Dpkg::Options::="--force-confold" install python3 -y
+  sudo apt -o Dpkg::Options::="--force-confold" install python3.10 -y
+  sudo apt -o Dpkg::Options::="--force-confold" install python3.11 -y
   sudo apt -o Dpkg::Options::="--force-confold" install python3-pip -y
   sudo apt -o Dpkg::Options::="--force-confold" install python3-venv -y
   sudo apt -o Dpkg::Options::="--force-confold" install libgl1 -y

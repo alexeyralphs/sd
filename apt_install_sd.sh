@@ -30,10 +30,10 @@ apt_install_sd() {
   curl -s -o /usr/lib/systemd/system/sdwebui.service https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/sdwebui.service
   sudo sed -i "s/\$admin_name/$admin_name/g" /usr/lib/systemd/system/sdwebui.service
 
-  git clone https://github.com/Zyin055/Config-Presets.git /var/www/sdadmin/sd/stable-diffusion-webui/extensions/Config-Presets
+  git clone https://github.com/Zyin055/Config-Presets.git /var/www/$admin_name/stable-diffusion-webui/extensions/Config-Presets
   curl -s -o /var/www/$admin_name/stable-diffusion-webui/extensions/Config-Presets/config-txt2img.json https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/config-txt2img.json
   curl -s -o /var/www/$admin_name/stable-diffusion-webui/extensions/Config-Presets/config-img2img.json https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/config-img2img.json
 
-  git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler.git /var/www/sdadmin/sd/stable-diffusion-webui/extensions/sd-webui-agent-scheduler
-  git clone https://github.com/zanllp/sd-webui-infinite-image-browsing.git /var/www/sdadmin/sd/stable-diffusion-webui/extensions/sd-webui-infinite-image-browsing 
+  git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-agent-scheduler
+  git clone https://github.com/zanllp/sd-webui-infinite-image-browsing.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-infinite-image-browsing 
 }

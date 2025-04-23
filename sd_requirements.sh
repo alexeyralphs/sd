@@ -14,8 +14,4 @@ sd_requirements() {
   sudo apt -o Dpkg::Options::="--force-confold" install bc -y
   sudo apt -o Dpkg::Options::="--force-confold" install google-perftools -y
   sudo apt -o Dpkg::Options::="--force-confold" install git -y
-
-  sudo mkdir -vp /var/www/$admin_name/stable-diffusion-webui
-  sudo wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh -O /var/www/$admin_name/webui.sh
-  sudo chmod +x /var/www/$admin_name/webui.sh
 }

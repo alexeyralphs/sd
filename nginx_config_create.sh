@@ -10,9 +10,9 @@ nginx_config_create() {
     sudo sed -i "s/\$WEB_ADDRESS/$WEB_ADDRESS/g" /etc/nginx/sites-available/$admin_name
     sudo sed -i "s/\$admin_name/$admin_name/g" /etc/nginx/sites-available/$admin_name
     sudo ln -s /etc/nginx/sites-available/$admin_name /etc/nginx/sites-enabled/
-    sudo mkdir -vp /var/www/$admin_name
+    sudo mkdir -vp /var/www/$admin_name/html
 
-    curl -s -o /var/www/$admin_name/index.php https://raw.githubusercontent.com/alexeyralphs/Ultimate-arVPN/refs/heads/main/index.html
+    curl -s -o /var/www/$admin_name/html/index.php https://raw.githubusercontent.com/alexeyralphs/Ultimate-arVPN/refs/heads/main/index.html
 
     sudo systemctl restart nginx
     

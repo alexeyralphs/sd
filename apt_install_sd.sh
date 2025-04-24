@@ -39,4 +39,40 @@ apt_install_sd() {
 
   git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-agent-scheduler
   git clone https://github.com/zanllp/sd-webui-infinite-image-browsing.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-infinite-image-browsing
+
+  sudo journalctl -u sdwebui -n 1 --no-pager -o cat
+  sleep 5
+  echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
+  sleep 5
+  sudo journalctl -u sdwebui -n 1 --no-pager -o cat
+  sleep 5
+  echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
+  sleep 10
+  sudo journalctl -u sdwebui -n 1 --no-pager -o cat
+  sleep 5
+  echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
+  sleep 15
+  sudo journalctl -u sdwebui -n 1 --no-pager -o cat
+  sleep 5
+  echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
+  sleep 20
+  sudo journalctl -u sdwebui -n 1 --no-pager -o cat
+  sleep 5
+  echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
+  sleep 25
+  sudo journalctl -u sdwebui -n 1 --no-pager -o cat
+  sleep 5
+  echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
+  sleep 30
+  sudo journalctl -u sdwebui -n 1 --no-pager -o cat
+  sleep 5
+  echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
+  sleep 35
+  sudo journalctl -u sdwebui -n 1 --no-pager -o cat
+  sleep 5
+  echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
+
+  wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors -O /var/www/$admin_name/stable-diffusion-webui/models/Stable-diffusion/sd_xl_base_1.0.safetensors
+
+  sudo systemctl restart sdwebui
 }

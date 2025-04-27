@@ -50,7 +50,7 @@ sd_start() {
   sleep 5
   echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"
 
-  wget https://huggingface.co/XpucT/Deliberate/raw/main/Deliberate_v2.safetensors -O /var/www/$admin_name/stable-diffusion-webui/models/Stable-diffusion/Deliberate_v2.safetensors
+  wget https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v2.safetensors -O /var/www/$admin_name/stable-diffusion-webui/models/Stable-diffusion/Deliberate_v2.safetensors
 
   sudo systemctl restart sdwebui
 }

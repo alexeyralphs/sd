@@ -22,11 +22,14 @@ apt_install_sd() {
   sudo apt -o Dpkg::Options::="--force-confold" install git -y
 
   git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /var/www/$admin_name/stable-diffusion-webui
+  sudo mkdir -vp /var/www/$admin_name/stable-diffusion-webui/models/ESRGAN
 
   echo '# For CPU render:' >  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
   echo 'export COMMANDLINE_ARGS="--autolaunch --update-check --no-half-vae --medvram-sdxl --opt-sdp-attention --skip-torch-cuda-test --use-cpu all --no-half --enable-insecure-extension-access"' >>  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
   echo '# For GPU render:' >>  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
   echo '# export COMMANDLINE_ARGS="--autolaunch --update-check --no-half-vae --xformers --medvram-sdxl --opt-sdp-attention --skip-torch-cuda-test --no-half --enable-insecure-extension-access"' >>  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
+
+  curl -s -o /var/www/$admin_name/stable-diffusion-webui/styles.csv https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/styles.csv
 
   curl -s -o /usr/lib/systemd/system/sdwebui.service https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/sdwebui.service
   sudo sed -i "s/\$admin_name/$admin_name/g" /usr/lib/systemd/system/sdwebui.service

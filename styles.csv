@@ -1,0 +1,2 @@
+name,prompt,negative_prompt
+negative,"best quality.","worst quality, ac_neg1, ac_neg2."

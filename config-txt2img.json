@@ -2,9 +2,9 @@
   "Static": {
     "txt2img_sampling": "DPM++ 2M",
     "txt2img_scheduler": "Karras",
-    "txt2img_steps": 40,
-    "txt2img_width": 810,
-    "txt2img_height": 1080,
+    "txt2img_steps": 36,
+    "txt2img_width": 720,
+    "txt2img_height": 960,
     "txt2img_batch_count": 1,
     "txt2img_batch_size": 1,
     "txt2img_hr-checkbox": false,
@@ -12,7 +12,7 @@
     "txt2img_hr_upscaler": "4x-UltraMix_Smooth",
     "txt2img_hires_steps": 15,
     "txt2img_denoising_strength": 0.43,
-    "txt2img_cfg_scale": 7.5,
+    "txt2img_cfg_scale": 6,
     "txt2img_enable-checkbox": true,
     "txt2img_switch_at": 0.5
   }

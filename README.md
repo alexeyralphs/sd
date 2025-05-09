@@ -6,3 +6,7 @@ Noise schedule for sampling (for use with zero terminal SNR trained models):
 ```bash
 Zero Terminal SNR
 ```
+Clip skip:
+```bash
+2
+```

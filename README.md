@@ -10,3 +10,4 @@ Clip skip:
 ```bash
 2
 ```
+Clip skip SDXL: Enable

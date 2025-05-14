@@ -1,2 +1,2 @@
 name,prompt,negative_prompt
-negative,"best quality.","worst quality, ac_neg1, ac_neg2."
+negative,"SuperQuality, SDXL_POS, BaseStyle-vPred09Rv4.","unaestheticXL_cbp62 -neg, negativeXL_D, DeepNegative_xl_v1."

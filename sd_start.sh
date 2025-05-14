@@ -18,9 +18,6 @@ sd_start() {
   git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-agent-scheduler
   git clone https://github.com/zanllp/sd-webui-infinite-image-browsing.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-infinite-image-browsing
 
-  git clone https://github.com/civitai/sd_civitai_extension.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd_civitai_extension
-  python /var/www/$admin_name/stable-diffusion-webui/extensions/sd_civitai_extension/install.py
-
   sudo journalctl -u sdwebui -n 1 --no-pager -o cat
   sleep 5
   echo "${BLUE_BG}${BLACK_FG}Wait...${RESET}"

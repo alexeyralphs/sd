@@ -24,10 +24,10 @@ apt_install_sd() {
   git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /var/www/$admin_name/stable-diffusion-webui
   sudo mkdir -vp /var/www/$admin_name/stable-diffusion-webui/models/ESRGAN
 
-  echo '# For CPU render:' >  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
-  echo 'export COMMANDLINE_ARGS="--autolaunch --listen --server-name $WEB_ADDRESS --gradio-auth $admin_name:$PASSWORD --upcast-sampling --update-check --no-half-vae --medvram-sdxl --opt-sdp-attention --skip-torch-cuda-test --use-cpu all --no-half --enable-insecure-extension-access"' >>  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
-  echo '# For GPU render:' >>  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
-  echo '# export COMMANDLINE_ARGS="--autolaunch --listen --server-name $WEB_ADDRESS --gradio-auth $admin_name:$PASSWORD --upcast-sampling --update-check --no-half-vae --xformers --medvram-sdxl --opt-sdp-attention --skip-torch-cuda-test --no-half --enable-insecure-extension-access"' >>  /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
+  curl -s -o /var/www/$admin_name/stable-diffusion-webui/webui-user.sh https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/webui-user.sh
+  sudo sed -i "s/\$admin_name/$admin_name/g" /usr/lib/systemd/system/sdwebui.service
+  sudo sed -i "s/\$PASSWORD/$PASSWORD/g" /usr/lib/systemd/system/sdwebui.service
+  sudo sed -i "s/\$WEB_ADDRESS/$WEB_ADDRESS/g" /usr/lib/systemd/system/sdwebui.service
 
   curl -s -o /var/www/$admin_name/stable-diffusion-webui/styles.csv https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/styles.csv
 

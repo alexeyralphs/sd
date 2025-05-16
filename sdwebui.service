@@ -8,6 +8,9 @@ ExecStart=/var/www/$admin_name/stable-diffusion-webui/webui.sh
 User=$admin_name
 Restart=always
 RestartSec=3
+StandardOutput=journal
+StandardError=journal
+Environment=PYTHONUNBUFFERED=1
 
 [Install]
 WantedBy=default.target

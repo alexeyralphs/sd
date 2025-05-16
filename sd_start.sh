@@ -16,7 +16,7 @@ sd_start() {
   curl -s -o /var/www/$admin_name/stable-diffusion-webui/extensions/Config-Presets/config-img2img.json https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/config-img2img.json
 
   git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-agent-scheduler
-  git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser.git /var/www/$admin_name/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
+  git clone https://github.com/zanllp/sd-webui-infinite-image-browsing.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-infinite-image-browsing
 
   sudo journalctl -u sdwebui -n 1 --no-pager -o cat
   sleep 5

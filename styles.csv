@@ -1,2 +1,3 @@
 name,prompt,negative_prompt
-negative,"SuperQuality, SDXL_POS, BaseStyle-vPred09Rv4.","unaestheticXL_cbp62 -neg, negativeXL_D, DeepNegative_xl_v1."
+negative,"SuperQuality, SDXL_POS, BaseStyle-vPred09Rv4.","worst quality, low quality, text, watermark, username:1.
+unaestheticXL_cbp62 -neg, negativeXL_D, DeepNegative_xl_v1."

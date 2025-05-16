@@ -25,9 +25,9 @@ apt_install_sd() {
   sudo mkdir -vp /var/www/$admin_name/stable-diffusion-webui/models/ESRGAN
 
   curl -s -o /var/www/$admin_name/stable-diffusion-webui/webui-user.sh https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/webui-user.sh
-  sudo sed -i "s/\$admin_name/$admin_name/g" /usr/lib/systemd/system/sdwebui.service
-  sudo sed -i "s/\$PASSWORD/$PASSWORD/g" /usr/lib/systemd/system/sdwebui.service
-  sudo sed -i "s/\$WEB_ADDRESS/$WEB_ADDRESS/g" /usr/lib/systemd/system/sdwebui.service
+  sudo sed -i "s/\$admin_name/$admin_name/g" /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
+  sudo sed -i "s/\$PASSWORD/$PASSWORD/g" /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
+  sudo sed -i "s/\$WEB_ADDRESS/$WEB_ADDRESS/g" /var/www/$admin_name/stable-diffusion-webui/webui-user.sh
 
   curl -s -o /var/www/$admin_name/stable-diffusion-webui/styles.csv https://raw.githubusercontent.com/alexeyralphs/sd/refs/heads/main/styles.csv
 

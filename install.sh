@@ -33,6 +33,14 @@ if [[ -z "$func_check_ipv4" ]]; then
 fi
 source <(echo "$func_check_ipv4")
 
+# crontab() {}
+func_crontab=$(curl -s https://raw.githubusercontent.com/alexeyralphs/Ultimate-arVPN/refs/heads/main/bash_functions/crontab.sh)
+if [[ -z "$func_crontab" ]]; then
+    echo "Error in func_crontab!" >&2
+    exit 1
+fi
+source <(echo "$func_crontab")
+
 # check_answer_hostname() {}
 func_check_answer_hostname=$(curl -s https://raw.githubusercontent.com/alexeyralphs/Ultimate-arVPN/refs/heads/main/bash_functions/check_answer_hostname.sh)
 if [[ -z "$func_check_answer_hostname" ]]; then
@@ -130,6 +138,8 @@ fi
 source <(echo "$func_sd_start")
 
 apt_install_initial
+
+crontab
 
 check_ipv4
 

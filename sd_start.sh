@@ -17,6 +17,7 @@ sd_start() {
 
   git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-agent-scheduler
   git clone https://github.com/zanllp/sd-webui-infinite-image-browsing.git /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-infinite-image-browsing
+  git clone https://codeberg.org/Gourieff/sd-webui-reactor /var/www/$admin_name/stable-diffusion-webui/extensions/sd-webui-reactor
 
   sudo journalctl -u sdwebui -n 1 --no-pager -o cat
   sleep 5

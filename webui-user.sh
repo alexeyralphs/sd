@@ -1,5 +1,5 @@
 # For CPU render:
-export COMMANDLINE_ARGS="--autolaunch --api --api-auth $admin_name:$PASSWORD --upcast-sampling --update-check --no-half-vae --medvram-sdxl --opt-sdp-attention --skip-torch-cuda-test --no-half --enable-insecure-extension-access --use-cpu all"
+export COMMANDLINE_ARGS="--api --api-auth $admin_name:$PASSWORD --lowvram --opt-sdp-attention --enable-insecure-extension-access --upcast-sampling --update-check --no-half-vae --skip-torch-cuda-test --no-half --use-cpu all"
 # For GPU render:
-# export COMMANDLINE_ARGS="--autolaunch --api --api-auth $admin_name:$PASSWORD --upcast-sampling --update-check --no-half-vae --medvram-sdxl --opt-sdp-attention --skip-torch-cuda-test --no-half --enable-insecure-extension-access --xformers"
+# export COMMANDLINE_ARGS="--api --api-auth $admin_name:$PASSWORD --lowvram --opt-sdp-attention --enable-insecure-extension-access --upcast-sampling --update-check --no-half-vae --skip-torch-cuda-test --no-half"
 export LD_PRELOAD=libtcmalloc.so.4
